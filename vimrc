@@ -21,50 +21,56 @@ set undofile
 set incsearch
 set termguicolors
 set scrolloff=8
-set completeopt=menuone
+set completeopt=longest,menuone
 set colorcolumn=120
 set signcolumn=yes
 set cmdheight=2
-set shortmess+=c
+set shortmess=a
+
+let mapleader=","
 
 highlight ColorColum ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
-Plug 'tpope/vim-fugitive'
-Plug 'jremmen/vim-ripgrep'
-Plug 'vim-utils/vim-man'
-Plug 'lyuts/vim-rtags'
-Plug 'kien/ctrlp.vim'
-Plug 'ycm-core/YouCompleteMe'
-Plug 'mbbill/undotree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
+" Plug 'tpope/vim-fugitive'
+" Plug 'jremmen/vim-ripgrep'
+" Plug 'vim-utils/vim-man'
+" Plug 'lyuts/vim-rtags'
+" Plug 'kien/ctrlp.vim'
+" Plug 'ycm-core/YouCompleteMe'
+" Plug 'mbbill/undotree'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-surround'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'frazrepo/vim-rainbow'
-Plug 'mileszs/ack.vim'
-Plug 'dense-analysis/ale'
-Plug 'altercation/vim-colors-solarized'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'tpope/vim-surround'
+" Plug 'terryma/vim-multiple-cursors'
+" Plug 'frazrepo/vim-rainbow'
+" Plug 'mileszs/ack.vim'
+" Plug 'dense-analysis/ale'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdcommenter'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-lua/popup.nvim'
-Plug 'airblade/vim-rooter'
-Plug 'nvim-telescope/telescope.nvim'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-lua/popup.nvim'
+" Plug 'airblade/vim-rooter'
+" Plug 'nvim-telescope/telescope.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
 colorscheme gruvbox
 set background=dark
+let mapleader = ","
+nmap <C-_> gcc
+vmap <C-_> gcc
+nnoremap <C-d> yyp
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
